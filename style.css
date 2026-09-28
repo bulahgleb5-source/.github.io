@@ -1,0 +1,404 @@
+/* ==========================================================================
+   1. Базовые настройки темы в стиле High-End Premium Dark
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important; /* Полный отказ от скруглений */
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #ffffff;
+    background-color: #060708; /* Глубокий черный фон */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. ЭКРАН ПРЕДЗАГРУЗКИ (PRELOADER) С ФИКСИРОВАННЫМ ВРЕМЕНЕМ
+   ========================================================================== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #060708;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.preloader-logo-svg {
+    height: 90px;
+    width: 90px;
+    display: block;
+    animation: pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: scale(0.96); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+.loading-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.loading-dots span {
+    width: 6px;
+    height: 6px;
+    background-color: #00a8ff; /* Фирменный синий */
+    display: inline-block;
+    animation: bounce 1.2s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); opacity: 0.2; }
+    40% { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   3. ПРЕМИАЛЬНАЯ ТЕМНАЯ ШАПКА И НАВИГАЦИЯ
+   ========================================================================== */
+.header {
+    background-color: #0f1113; /* Графитовый фон */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    border-bottom: 1px solid #1a1d21;
+}
+
+.header-logo-link {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.header-logo-link:hover { opacity: 0.85; }
+
+.header-logo-img {
+    height: 38px; /* Идеальный баланс под текст */
+    width: auto;
+    display: block;
+}
+
+.header-logo-text-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-heavy {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff; 
+    line-height: 1.0;
+}
+
+.logo-subtext {
+    font-size: 9px;
+    color: #8a99ad;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 6px;
+}
+.header-center-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-nav-item {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #3a414a;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-nav-item:hover {
+    background: #00a8ff;
+    border-color: #00a8ff;
+    color: #ffffff;
+}
+
+/* Стили для неактивных кнопок Тендеры и Новости */
+.btn-nav-item.disabled {
+    border: 1px solid #1a1d21;
+    color: #57657a;
+    cursor: default;
+}
+.btn-nav-item.disabled:hover {
+    background: transparent;
+    border-color: #1a1d21;
+    color: #57657a;
+}
+
+.dropdown-menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-services-toggle {
+    background: transparent;
+    border: 1px solid #3a414a;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0f1113;
+    min-width: 330px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    border: 1px solid #1a1d21;
+    z-index: 300;
+}
+
+.dropdown-content a {
+    color: #cbd5e1;
+    padding: 16px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #1a1d21;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content a:last-child { border-bottom: none; }
+.dropdown-menu-container:hover .dropdown-content { display: block; }
+.dropdown-menu-container:hover .btn-services-toggle { background: #00a8ff; border-color: #00a8ff; color: #ffffff; }
+.dropdown-content a:hover { background-color: #16191d; color: #00a8ff; padding-left: 25px; }
+
+.header-right { 
+    display: flex; 
+    align-items: center; 
+    gap: 25px; 
+}
+
+.header-schedule { display: flex; flex-direction: column; text-align: right; font-size: 13px; }
+.header-schedule strong { color: #ffffff; font-size: 15px; font-weight: 700; }
+.header-schedule span { color: #8a99ad; font-size: 11px; }
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: none;
+}
+.btn-primary { background: #00a8ff; color: #ffffff; }
+.btn-primary:hover { background: #ffffff; color: #060708; }
+.btn-secondary { background: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); }
+.btn-secondary:hover { background: #ffffff; color: #060708; border-color: #ffffff; }
+
+/* ==========================================================================
+   4. БАННЕР И ГЕРОЙСКИЕ СЕКЦИИ
+   ========================================================================== */
+.hero {
+    background-image: linear-gradient(rgba(6, 7, 8, 0.85), rgba(6, 7, 8, 0.85)), url('bg-hd.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 65vh; 
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+}
+
+.hero-container { max-width: 1100px; margin: 0; text-align: left; }
+.hero-badge {
+    display: inline-block;
+    border: 1px solid rgba(0, 168, 255, 0.3);
+    background: rgba(0, 168, 255, 0.05);
+    color: #00a8ff;
+    padding: 6px 16px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+.hero h1 { font-size: 46px; font-weight: 800; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; text-transform: uppercase; }
+.hero p { font-size: 16px; color: #94a3b8; margin-bottom: 35px; max-width: 750px; line-height: 1.7; }
+.hero-actions { display: flex; justify-content: flex-start; gap: 20px; }
+
+.hero-service-minimal {
+    background-color: #0f1113;
+    padding: 100px 60px 50px 60px;
+    border-bottom: 1px solid #1a1d21;
+}
+
+.container-service { max-width: 1100px; margin: 0 auto; }
+.service-title-main { font-size: 42px; font-weight: 900; text-transform: uppercase; color: #ffffff; }
+.service-subtitle-main { color: #00a8ff; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 11px; margin-top: 10px; }
+/* ==========================================================================
+   5. СТАТИСТИКА И МЕТРИКИ
+   ========================================================================== */
+.stats-section { background: #0f1113; padding: 70px 60px; border-bottom: 1px solid #1a1d21; }
+.stats-grid-main { max-width: 1240px; margin: 0 auto; display: flex; justify-content: space-between; gap: 40px; }
+.stat-main-box { flex: 1; display: flex; flex-direction: column; border-left: 1px solid #1a1d21; padding-left: 30px; }
+.stat-number { font-size: 42px; font-weight: 800; color: #00a8ff; line-height: 1; margin-bottom: 10px; letter-spacing: -1px; }
+.stat-label { font-size: 11px; color: #8a99ad; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+
+/* ==========================================================================
+   6. ОБЪЕДИНЕННЫЙ БЛОК: ВОПРОСЫ И КОНТАКТЫ
+   ========================================================================== */
+.business-combined-section { background-color: #060708; padding: 90px 60px; width: 100%; border-bottom: 1px solid #1a1d21; }
+.combined-wrapper { max-width: 1240px; margin: 0 auto; display: flex; gap: 80px; align-items: flex-start; }
+
+.combined-faq-left { flex: 1 1 50%; }
+.combined-faq-left h2 { font-size: 30px; text-transform: uppercase; color: #ffffff; margin-bottom: 15px; font-weight: 800; letter-spacing: 0.5px; }
+.combined-faq-sub { font-size: 14px; color: #8a99ad; margin-bottom: 40px; }
+.faq-compact-list { display: flex; flex-direction: column; }
+.faq-compact-item { border-bottom: 1px solid #1a1d21; padding: 25px 0; cursor: pointer; }
+.faq-compact-item:first-child { border-top: 1px solid #1a1d21; }
+.faq-compact-item:hover { background-color: rgba(255,255,255,0.01); }
+.faq-compact-question { font-size: 15px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px; position: relative; padding-right: 30px; }
+
+.faq-compact-question::after {
+    content: '+'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: #00a8ff; font-size: 18px; transition: transform 0.2s ease;
+}
+.faq-compact-item.active .faq-compact-question::after { content: '−'; }
+
+.faq-compact-answer { 
+    max-height: 0; overflow: hidden; font-size: 14px; color: #94a3b8; line-height: 1.6; margin-top: 0;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), margin-top 0.3s ease;
+}
+.faq-compact-item.active .faq-compact-answer { max-height: 200px; margin-top: 15px; transition: max-height 0.3s cubic-bezier(1, 0, 1, 0), margin-top 0.3s ease; }
+
+.combined-contacts-right { flex: 1 1 50%; background: #0f1113; color: #ffffff; padding: 45px; border: 1px solid #1a1d21; display: flex; flex-direction: column; gap: 40px; }
+.business-text-block h3 { margin-bottom: 20px; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px; border-bottom: 1px solid #1a1d21; padding-bottom: 14px; color: #00a8ff; }
+.business-text-block p { margin-bottom: 12px; font-size: 14px; color: #94a3b8; }
+.business-text-block strong { color: #ffffff; font-weight: 600; }
+.business-form-block h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #ffffff; margin-bottom: 25px; }
+
+.form-input { width: 100%; padding: 16px 18px; background: #060708; border: 1px solid #1a1d21; color: #ffffff; font-size: 13px; margin-bottom: 15px; font-family: inherit; outline: none; }
+.form-input:focus { border-color: #00a8ff; background: #0f1113; }
+.form-textarea { height: 90px; resize: none; }
+.btn-submit { width: 100%; background: #00a8ff; color: #ffffff; padding: 18px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; }
+.btn-submit:hover { background: #ffffff; color: #060708; }
+.form-privacy { display: block; font-size: 11px; color: #57657a; margin-top: 15px; line-height: 1.5; }
+
+/* ==========================================================================
+   7. ПОДВАЛ И СЛУЖЕБНЫЕ СТРАНИЦЫ
+   ========================================================================== */
+.footer { background-color: #060708; color: #57657a; padding: 40px 60px; font-size: 13px; border-top: 1px solid #1a1d21; }
+.footer-container { max-width: 1240px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer-link { color: #57657a; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s ease; font-weight: 600; }
+.footer-link:hover { color: #ffffff; border-bottom-color: #ffffff; }
+
+.container-lg { max-width: 1240px; margin: 0 auto; padding: 0 60px; }
+.service-page-main { max-width: 1100px; margin: 0 auto; padding: 70px 60px 100px 60px; }
+.service-lead-text { font-size: 16px; color: #cbd5e1; margin-bottom: 50px; line-height: 1.7; max-width: 850px; }
+.service-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; }
+.service-details-card { background: #0f1113; border: 1px solid #1a1d21; padding: 35px; position: relative; transition: transform 0.2s ease, border-color 0.2s ease; }
+.service-details-card:hover { border-color: #3a414a; transform: translateY(-2px); }
+.service-details-card h3 { font-size: 18px; font-weight: 800; text-transform: uppercase; color: #00a8ff; margin-bottom: 15px; letter-spacing: 0.5px; }
+.service-details-card p { font-size: 14.5px; color: #94a3b8; line-height: 1.6; }
+
+.geometric-index { display: block; font-size: 32px; font-weight: 900; color: rgba(0, 168, 255, 0.15); font-family: monospace, sans-serif; margin-bottom: 15px; line-height: 1; }
+.service-form-wrapper { margin-top: 80px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* Автопарк / Галерея */
+.gallery-section { padding: 60px 0; background: #060708; }
+.autopark-category-title { font-size: 16px; font-weight: 800; text-transform: uppercase; color: #ffffff; border-left: 4px solid #00a8ff; padding-left: 15px; margin: 40px 0 25px 0; letter-spacing: 1px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; }
+.gallery-card { background: #0f1113; border: 1px solid #1a1d21; overflow: hidden; transition: all 0.25s ease; cursor: pointer; }
+.gallery-card:hover { border-color: #00a8ff; transform: translateY(-4px); }
+.gallery-photo-box { width: 100%; height: 220px; background-color: #060708; border-bottom: 1px solid #1a1d21; }
+.gallery-photo-box img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
+.gallery-card:hover img { opacity: 1; }
+.gallery-card-desc { padding: 20px; }
+.gallery-card-desc h3 { font-size: 15px; color: #ffffff; text-transform: uppercase; margin-bottom: 8px; font-weight: 800; }
+.gallery-card:hover .gallery-card-desc h3 { color: #00a8ff; }
+.gallery-card-desc p { font-size: 13px; color: #94a3b8; line-height: 1.6; }
+
+/* ==========================================================================
+   8. Адаптивность (Медиа-запросы)
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .header { padding: 20px 30px; }
+    .business-combined-section, .stats-section, .footer, .service-page-main, .container-lg { padding-left: 30px; padding-right: 30px; }
+    .combined-wrapper { gap: 40px; }
+    .stats-grid-main { flex-wrap: wrap; gap: 30px; }
+    .stat-main-box { flex: 1 1 calc(50% - 30px); }
+}
+@media (max-width: 992px) {
+    .header-center-nav { display: none; }
+    .hero h1 { font-size: 36px; }
+    .combined-wrapper { flex-direction: column; gap: 60px; }
+    .combined-faq-left, .combined-contacts-right { flex: 1 1 100%; width: 100%; }
+    .service-details-grid { grid-template-columns: 1fr; gap: 25px; }
+    .header-right { gap: 15px; }
+}
+@media (max-width: 576px) {
+    .header { flex-direction: column; gap: 15px; text-align: center; }
+    .header-logo-link { gap: 10px; justify-content: center; }
+    .header-logo-img { height: 32px; }
+    .logo-heavy { font-size: 18px; }
+    .logo-subtext { font-size: 8px; }
+    .header-schedule { text-align: center; }
+    .hero { padding: 30px; height: auto; min-height: 60vh; }
+    .hero h1 { font-size: 26px; }
+    .container-lg { padding: 0 20px; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 20px; }
+}
