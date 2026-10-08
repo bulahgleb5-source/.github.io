@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ООО «Альтербелтех» | Генеральный подряд и инженерные сети полного цикла</title>
     <meta name="description" content="Реализация строительных проектов полного цикла, общестроительные работы и монтаж технологического оборудования в Минске и по всей Беларуси.">
-    <!-- Подключение фавиконки (логотипа на вкладке браузера) -->
     <link rel="icon" type="image/jpeg" href="1001.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Премиальный экран загрузки с мгновенным векторным логотипом на 1 секунду -->
+    <!-- Премиальный экран загрузки -->
     <div class="preloader" id="preloader">
         <div class="preloader-content">
-            <svg class="preloader-logo-svg" viewBox="0 0 100 100" xmlns="http://w3.org">
+            <svg class="preloader-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <polygon points="50,15 90,85 10,85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linejoin="miter"/>
                 <line x1="22" y1="68" x2="78" y2="68" stroke="#ffffff" stroke-width="6"/>
             </svg>
+            <div class="preloader-title">АЛЬТЕРБЕЛТЕХ</div>
             <div class="loading-dots">
                 <span></span>
                 <span></span>
@@ -29,11 +29,10 @@
     <!-- Премиальная темная шапка -->
     <header class="header">
         <a href="index.html" class="header-left header-logo-link">
-            <!-- Точное подключение вашего нового файла логотипа -->
             <img src="1001.jpg" alt="ООО Альтербелтех" class="header-logo-img">
             <div class="header-logo-text-block">
                 <div class="logo logo-heavy">Альтербелтех</div>
-                <span class="logo-subtext">Строительные проекты полного цикла</span>
+                <span class="logo-subtext">Строительная компания</span>
             </div>
         </a>
         
@@ -46,7 +45,7 @@
                     <a href="zemlyanye-raboty.html">Общестроительные работы</a>
                     <a href="demontazh.html">Сети электроснабжения (внутр./наруж.)</a>
                     <a href="dostavka.html">Вентиляция, ВК и НВК</a>
-                    <a href="blagoustrojstvo.html">Mонтаж тех. оборудования</a>
+                    <a href="blagoustrojstvo.html">Монтаж тех. оборудования</a>
                 </div>
             </div>
             <a href="autopark.html" class="btn-nav-item">Техника</a>
@@ -65,9 +64,8 @@
 
     <section class="hero">
         <div class="hero-container">
-            <span class="hero-badge">Работаем с 2022 года</span>
-            <h1>Строительные проекты полного цикла:<br>от инженерии до ввода в эксплуатацию</h1>
-            <p>Реализуем промышленные и гражданские объекты любой сложности. Официальный генподряд, возведение несущих конструкций, монтаж внутренних и наружных сетей силами собственного инженерного штаба.</p>
+            <h1>Реализация проектов по строительству и реконструкции зданий и сооружений: от котлована до инженерии</h1>
+            <p>Генеральный подряд, полный спектр общестроительных услуг, монтаж наружных и внутренних инженерных систем, комплекс пусконаладочных работ</p>
             <div class="hero-actions">
                 <a href="autopark.html" class="btn btn-primary">Смотреть автопарк</a>
                 <a href="#combined-zone" class="btn btn-secondary">Обсудить проект</a>
@@ -159,7 +157,6 @@
     </footer>
 
     <script>
-        // Фиксированный жесткий таймер скрытия прелоадера ровно на 1 секунду
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const preloader = document.getElementById('preloader');
@@ -167,7 +164,6 @@
             }, 1000);
         });
 
-        // Работа интерактивного аккордеона FAQ
         document.querySelectorAll('.faq-compact-item').forEach(item => {
             item.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
