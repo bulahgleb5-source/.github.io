@@ -9,19 +9,19 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border-radius: 0 !important; /* Полный отказ от скруглений */
+    border-radius: 0 !important;
 }
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     color: #ffffff;
-    background-color: #060708; /* Глубокий черный фон */
+    background-color: #060708;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 /* ==========================================================================
-   2. ЭКРАН ПРЕДЗАГРУЗКИ (PRELOADER) С ФИКСИРОВАННЫМ ВРЕМЕНЕМ
+   2. ЭКРАН ПРЕДЗАГРУЗКИ (PRELOADER)
    ========================================================================== */
 .preloader {
     position: fixed;
@@ -56,6 +56,16 @@ body {
     animation: pulse 1.2s infinite ease-in-out;
 }
 
+.preloader-title {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffffff;
+    line-height: 1;
+    margin-top: 5px;
+}
+
 @keyframes pulse {
     0%, 100% { opacity: 0.6; transform: scale(0.96); }
     50% { opacity: 1; transform: scale(1); }
@@ -69,7 +79,7 @@ body {
 .loading-dots span {
     width: 6px;
     height: 6px;
-    background-color: #00a8ff; /* Фирменный синий */
+    background-color: #00a8ff;
     display: inline-block;
     animation: bounce 1.2s infinite ease-in-out both;
 }
@@ -86,7 +96,7 @@ body {
    3. ПРЕМИАЛЬНАЯ ТЕМНАЯ ШАПКА И НАВИГАЦИЯ
    ========================================================================== */
 .header {
-    background-color: #0f1113; /* Графитовый фон */
+    background-color: #0f1113;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,7 +119,7 @@ body {
 .header-logo-link:hover { opacity: 0.85; }
 
 .header-logo-img {
-    height: 38px; /* Идеальный баланс под текст */
+    height: 38px;
     width: auto;
     display: block;
 }
@@ -163,7 +173,6 @@ body {
     color: #ffffff;
 }
 
-/* Стили для неактивных кнопок Тендеры и Новости */
 .btn-nav-item.disabled {
     border: 1px solid #1a1d21;
     color: #57657a;
