@@ -3,59 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ООО «АльтерБелТех» | Генеральный подряд и инженерные сети полного цикла</title>
+    <title>ООО «Альтербелтех» | Генеральный подряд и инженерные сети полного цикла</title>
     <meta name="description" content="Реализация строительных проектов полного цикла, общестроительные работы и монтаж технологического оборудования в Минске и по всей Беларуси.">
+    <!-- Подключение фавиконки (логотипа на вкладке браузера) -->
     <link rel="icon" type="image/jpeg" href="1001.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Содержимое прелодера и шапки сайта (header) с навигацией и контактами -->
-    <div class="preloader" id="preloader">...</div>
-    <header class="header">...</header> section class="hero" КОНЕЦ
-<div class="hero-container">
-<h1 style="font-size: 24px; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; margin-bottom: 30px; font-weight: 700;">
-Реализация проектов по строительству и реконструкции зданий и сооружений: от котлована до инженерии
-<section class="hero">
-<div class="hero-container">
-<h1 style="font-size: 24px; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; margin-bottom: 30px; font-weight: 700;">
-Реализация проектов по строительству и реконструкции зданий и сооружений: от котлована до инженерии
-</h1>
-<div class="hero-description-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; text-align: left;">
-<div class="hero-desc-left" style="color: #cccccc; font-size: 15px; line-height: 1.7;">
-Реализуем промышленные и гражданские объекты любой сложности. Официальный генподряд, возведение несущих конструкций, монтаж внутренних и наружных сетей силами собственного инженерного штаба.
-</div>
-<div class="hero-desc-right" style="color: #cccccc; font-size: 15px; line-height: 1.7;">
-Генеральный подряд, полный спектр общестроительных услуг, монтаж наружных и внутренних инженерных систем, комплекс пусконаладочных работ.
-</div>
-</div>
-<div class="hero-actions">
-<a href="autopark.html" class="btn btn-primary"> Смотреть автопарк </a>
-<a href="#combined-zone" class="btn btn-secondary"> Обсудить проект </a>
-</div>
-</div>
-</section>
-<section class="stats-section">
-<div class="container-lg">
-<div class="stats-grid-main">
-<div class="stat-main-box">
-<span class="stat-number"> 3+ </span>
-<span class="stat-label"> Года успешного развития </span>
-</div>
-<div class="stat-main-box">
-<span class="stat-number"> 500+ </span>
-<span class="stat-label"> Выполненных объектов </span>
-</div>
-<div class="stat-main-box">
-<span class="stat-number"> 15+ </span>
-<span class="stat-label"> Единиц современной техники </span>
-</div>
-<div class="stat-main-box">
-<span class="stat-number"> 100% </span>
-<span class="stat-label"> Контроль качества этапов </span>
-</div>
-</div>
-</div>
-</section>
-<!-- ОБЪЕДИНЕННЫЙ БЛОК -->
-<section id="combined-zone" class="business-combined-section">
-<div class="combined-wrapper">
+
+    <!-- Премиальный экран загрузки с мгновенным векторным логотипом на 1 секунду -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <svg class="preloader-logo-svg" viewBox="0 0 100 100" xmlns="http://w3.org">
+                <polygon points="50,15 90,85 10,85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linejoin="miter"/>
+                <line x1="22" y1="68" x2="78" y2="68" stroke="#ffffff" stroke-width="6"/>
+            </svg>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Премиальная темная шапка -->
+    <header class="header">
+        <a href="index.html" class="header-left header-logo-link">
+            <!-- Точное подключение вашего нового файла логотипа -->
+            <img src="1001.jpg" alt="ООО Альтербелтех" class="header-logo-img">
+            <div class="header-logo-text-block">
+                <div class="logo logo-heavy">Альтербелтех</div>
+                <span class="logo-subtext">Строительные проекты полного цикла</span>
+            </div>
+        </a>
+        
+        <div class="header-center-nav">
+            <a href="contacts.html" class="btn-nav-item">О нас</a>
+            <div class="dropdown-menu-container">
+                <button class="btn-services-toggle">Услуги ▾</button>
+                <div class="dropdown-content">
+                    <a href="genpodryad.html">Генеральный подряд</a>
+                    <a href="zemlyanye-raboty.html">Общестроительные работы</a>
+                    <a href="demontazh.html">Сети электроснабжения (внутр./наруж.)</a>
+                    <a href="dostavka.html">Вентиляция, ВК и НВК</a>
+                    <a href="blagoustrojstvo.html">Mонтаж тех. оборудования</a>
+                </div>
+            </div>
+            <a href="autopark.html" class="btn-nav-item">Техника</a>
+            <a href="javascript:void(0);" class="btn-nav-item disabled">Тендеры</a>
+            <a href="javascript:void(0);" class="btn-nav-item disabled">Новости</a>
+        </div>
+
+        <div class="header-right">
+            <div class="header-schedule">
+                <strong>+375 (29) 123-45-67</strong>
+                <span>Ежедневно с 08:00 до 21:00</span>
+            </div>
+            <a href="#combined-zone" class="btn btn-primary">Связаться</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <span class="hero-badge">Работаем с 2022 года</span>
+            <h1>Строительные проекты полного цикла:<br>от инженерии до ввода в эксплуатацию</h1>
+            <p>Реализуем промышленные и гражданские объекты любой сложности. Официальный генподряд, возведение несущих конструкций, монтаж внутренних и наружных сетей силами собственного инженерного штаба.</p>
+            <div class="hero-actions">
+                <a href="autopark.html" class="btn btn-primary">Смотреть автопарк</a>
+                <a href="#combined-zone" class="btn btn-secondary">Обсудить проект</a>
+            </div>
+        </div>
+    </section>
+    <section class="stats-section">
+        <div class="container-lg">
+            <div class="stats-grid-main">
+                <div class="stat-main-box">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label">Года успешного развития</span>
+                </div>
+                <div class="stat-main-box">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Выполненных объектов</span>
+                </div>
+                <div class="stat-main-box">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Единиц современной техники</span>
+                </div>
+                <div class="stat-main-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Контроль качества этапов</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОБЪЕДИНЕННЫЙ БЛОК -->
+    <section id="combined-zone" class="business-combined-section">
+        <div class="combined-wrapper">
+            
+            <div class="combined-faq-left">
+                <h2>Вопросы и ответы</h2>
+                <p class="combined-faq-sub">Технологические стандарты, регламенты и прозрачность работы компании</p>
+                
+                <div class="faq-compact-list">
+                    <div class="faq-compact-item">
+                        <div class="faq-compact-question">Выполняете ли вы проекты «под ключ»?</div>
+                        <div class="faq-compact-answer">Да, мы выполняем полный комплекс работ силами одной организации. Это включает в себя проектирование, прокладку инженерных сетей (электрика, ВК, вентиляция), монтаж сложного оборудования и официальную сдачу объекта технадзору.</div>
+                    </div>
+                    
+                    <div class="faq-compact-item">
+                        <div class="faq-compact-question">Как обеспечивается контроль качества инженерных сетей?</div>
+                        <div class="faq-compact-answer">Контроль ведется в соответствии с регламентами СНиП, ГОСТ и ТКП. Каждая система проходит обязательные индивидуальные испытания (проливы, замеры сопротивления, аэродинамические тесты) с составлением официальных актов скрытых работ.</div>
+                    </div>
+                    
+                    <div class="faq-compact-item">
+                        <div class="faq-compact-question">Есть ли у компании аттестаты соответствия на данные работы?</div>
+                        <div class="faq-compact-answer">Да, ООО «Альтербелтех» осуществляет деятельность на основании официальных аттестатов соответствия Республики Беларусь на функции генерального подрядчика, выполнение общестроительных работ и устройство инженерных сетей.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="combined-contacts-right">
+                <div class="business-text-block">
+                    <h3>Контакты компании:</h3>
+                    <p><strong>Телефон:</strong> +375 (29) 123-45-67</p>
+                    <p><strong>Email:</strong> info@alterbeltech.by</p>
+                    <p><strong>Адрес:</strong> г. Минск, ул. Промышленная, д. 45</p>
+                </div>
+                
+                <div class="business-form-block">
+                    <h4>Отправить проект на расчет стоимости</h4>
+                    <form action="#" method="POST" onsubmit="alert('Проект отправлен на расчет!'); return false;">
+                        <input type="text" placeholder="Ваше имя" required class="form-input">
+                        <input type="tel" placeholder="Номер телефона" required class="form-input">
+                        <textarea placeholder="Опишите задачу, инженерные сети или требуемые параметры объекта" class="form-input form-textarea"></textarea>
+                        <button type="submit" class="btn btn-submit">Связаться с инженером</button>
+                    </form>
+                    <span class="form-privacy">Продолжая, вы даете согласие на обработку персональных данных и использование cookie-файлов.</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-copy">
+                <p>© 2026 Альтербелтех · ООО «Альтербелтех» · Все права защищены.</p>
+                <p style="font-size: 11px; margin-top: 5px; color: #57657a;">Свидетельство о госрегистрации выдано Минским горисполкомом. УНП 123456789. Юр. адрес: г. Минск, ул. Промышленная, д. 45</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Фиксированный жесткий таймер скрытия прелоадера ровно на 1 секунду
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                if (preloader) preloader.classList.add('fade-out');
+            }, 1000);
+        });
+
+        // Работа интерактивного аккордеона FAQ
+        document.querySelectorAll('.faq-compact-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-compact-item').forEach(el => el.classList.remove('active'));
+                if (!isActive) { item.classList.add('active'); }
+            });
+        });
+    </script>
+</body>
+</html>
